@@ -16,6 +16,7 @@ class Queue(Collection):
         self._queue = []
 
     def enqueue(self, item):
+        """Currently implemented with a O(n) solution"""
         if self.full():
             raise QueueException('already full')
         self._queue.insert(0, item)
